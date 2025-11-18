@@ -46,7 +46,7 @@ export default function AboutUsPage() {
             </div>
              <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                    src="https://picsum.photos/seed/factory/600/400"
+                    src="https://images.unsplash.com/photo-1601382270349-49c15bddf738?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8QnVzaW5lc3MlMjBHcm93dGglMjByZWZlcmVuY2UlMjBpbWFnZXN8ZW58MHx8fHwxNzYzNDkxNjQzfDA&ixlib=rb-4.1.0&q=80&w=1080"
                     alt="Weaving factory with looms"
                     fill
                     className="object-cover"
