@@ -7,7 +7,7 @@ const founders = [
   {
     name: 'P.K. Karthikeyan',
     role: 'Founder',
-    imageUrl: 'https://storage.googleapis.com/source-images/b49520a2-2580-496a-937b-9c7f21b7454f.jpeg',
+    imageUrl: '/assets/Founder.jpg',
     imageHint: 'professional headshot'
   },
   {
