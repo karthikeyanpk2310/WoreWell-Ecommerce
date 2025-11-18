@@ -84,19 +84,12 @@ export function AuthForm({ type }: AuthFormProps) {
 
   const onSubmit = async (values: any) => {
     setIsLoading(true);
-    try {
-      if (type === 'login') {
-        await login(values.email, values.password);
-      } else {
-        const { name, email, phone, gender, password, address } = values;
-        await signup({ name, email, phone, gender, password, address });
-      }
-    } catch (error) {
-      console.error(`${type} failed`, error);
-      // TODO: show toast error
-    } finally {
-      setIsLoading(false);
+    if (type === 'login') {
+      await login(values.email, values.password);
+    } else {
+      await signup(values);
     }
+    setIsLoading(false);
   };
 
   return (

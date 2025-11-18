@@ -1,12 +1,13 @@
 'use client';
+
 import { useUser as useFirebaseUser, useAuth as useFirebaseAuth } from "@/firebase";
 import { useToast } from "./use-toast";
 import { useRouter } from "next/navigation";
-import { signOut } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { doc } from "firebase/firestore";
 import { useFirestore } from "@/firebase";
 import { setDocumentNonBlocking } from "@/firebase/non-blocking-updates";
-import { initiateEmailSignIn, initiateEmailSignUp } from "@/firebase/non-blocking-login";
+import { initiateEmailSignIn } from "@/firebase/non-blocking-login";
 import type { User } from "@/types";
 
 export const useAuth = () => {
@@ -42,36 +43,32 @@ export const useAuth = () => {
 
   const signup = async (userData: Omit<User, 'id' | 'createdAt' | 'password'> & {password: string}) => {
     try {
-        initiateEmailSignUp(auth, userData.email, userData.password);
-        
-        // The user object won't be available immediately,
-        // so we have to listen for auth state changes.
-        // For now, let's assume it works and optimistically navigate.
-        // A more robust solution would use onAuthStateChanged to trigger the doc creation.
-        
-        const unsubscribe = auth.onAuthStateChanged(async (user) => {
-            if (user) {
-                const newUser: Omit<User, 'password'> = {
-                    id: user.uid,
-                    name: userData.name,
-                    email: userData.email,
-                    phone: userData.phone,
-                    gender: userData.gender,
-                    address: userData.address,
-                    createdAt: new Date().toISOString(),
-                };
-                const userDocRef = doc(firestore, "users", user.uid);
-                setDocumentNonBlocking(userDocRef, newUser, { merge: true });
-                unsubscribe(); // Unsubscribe after we have the user.
-                router.push('/?signup=success');
-            }
-        });
+      const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+      const { uid } = userCredential.user;
+
+      const newUser: Omit<User, 'password'> = {
+          id: uid,
+          name: userData.name,
+          email: userData.email,
+          phone: userData.phone,
+          gender: userData.gender,
+          address: userData.address,
+          createdAt: new Date().toISOString(),
+      };
+      const userDocRef = doc(firestore, "users", uid);
+      setDocumentNonBlocking(userDocRef, newUser, { merge: true });
+      
+      router.push('/?signup=success');
 
     } catch (error: any) {
       console.error("Signup failed", error);
+      let description = "An unexpected error occurred. Please try again.";
+      if (error.code === 'auth/email-already-in-use') {
+        description = "This email is already registered. Please login or use a different email.";
+      }
       toast({
         title: "Sign Up Failed",
-        description: error.message,
+        description: description,
         variant: "destructive",
       });
     }
