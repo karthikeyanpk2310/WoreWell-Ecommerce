@@ -46,11 +46,11 @@ export default function AboutUsPage() {
             </div>
              <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                    src="https://picsum.photos/seed/weavers/600/400"
-                    alt="Indian weavers working at a loom"
+                    src="https://picsum.photos/seed/factory/600/400"
+                    alt="Weaving factory with looms"
                     fill
                     className="object-cover"
-                    data-ai-hint="Indian weaver loom"
+                    data-ai-hint="weaving factory"
                 />
             </div>
           </CardContent>
