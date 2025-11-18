@@ -1,0 +1,110 @@
+
+import Image from 'next/image';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Target, Award, Users, Handshake } from 'lucide-react';
+
+const founders = [
+  {
+    name: 'P.K. Karthikeyan',
+    role: 'Founder',
+    imageUrl: 'https://picsum.photos/seed/karthikeyan/400/400',
+    imageHint: 'professional headshot'
+  },
+  {
+    name: 'Bharathi',
+    role: 'Co-Founder',
+    imageUrl: 'https://picsum.photos/seed/bharathi/400/400',
+    imageHint: 'professional headshot'
+  },
+  {
+    name: 'Gopika',
+    role: 'Co-Founder',
+    imageUrl: 'https://picsum.photos/seed/gopika/400/400',
+    imageHint: 'professional headshot'
+  },
+];
+
+export default function AboutUsPage() {
+  return (
+    <div className="space-y-16">
+      <div className="text-center pt-8">
+        <h1 className="text-5xl font-headline font-bold text-gray-800 dark:text-gray-200">About Wore Well</h1>
+        <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          Weaving together tradition and modernity, we bring the finest Indian textiles from the loom to your wardrobe, empowering artisans every step of the way.
+        </p>
+      </div>
+
+      <section>
+        <Card className="shadow-lg border-none bg-muted/30">
+          <CardContent className="p-10 grid md:grid-cols-2 gap-10 items-center">
+            <div className="space-y-4">
+              <Handshake className="w-12 h-12 text-primary" />
+              <h2 className="text-3xl font-headline font-bold">Our Story</h2>
+              <p className="text-muted-foreground">
+                Wore Well was born from a shared passion: to celebrate the rich heritage of Indian textiles and uplift the master weavers who are the custodians of this timeless craft. We embarked on a journey across the country, from the vibrant looms of Kanchipuram to the intricate workshops of Varanasi, to build a bridge between these incredible artisans and a global audience that appreciates quality, authenticity, and style.
+              </p>
+            </div>
+             <div className="relative h-80 rounded-lg overflow-hidden">
+                <Image
+                    src="https://picsum.photos/seed/weavers/600/400"
+                    alt="Indian weavers working at a loom"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="Indian weaver loom"
+                />
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="text-center">
+        <h2 className="text-4xl font-headline font-bold mb-8">Meet Our Founders</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {founders.map((founder) => (
+            <Card key={founder.name} className="overflow-hidden group">
+              <div className="relative h-64">
+                <Image
+                  src={founder.imageUrl}
+                  alt={`Portrait of ${founder.name}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  data-ai-hint={founder.imageHint}
+                />
+              </div>
+              <CardHeader className="p-4">
+                <CardTitle className="text-xl">{founder.name}</CardTitle>
+                <p className="text-sm text-primary font-semibold">{founder.role}</p>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        <Card>
+          <CardHeader className="flex-row items-center gap-4">
+            <Target className="w-8 h-8 text-accent" />
+            <CardTitle className="m-0">Our Motto</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              To provide quality, Indian-made clothing that empowers local weavers. We are dedicated to making their exceptional craftsmanship reachable worldwide, ensuring that every garment tells a story of heritage and skill.
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex-row items-center gap-4">
+            <Award className="w-8 h-8 text-primary" />
+            <CardTitle className="m-0">A Remarkable Journey</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              Through unwavering dedication to our mission, Wore Well has proudly achieved an annual revenue of <span className="font-bold text-foreground">₹20 Crores within just five years</span>, a testament to the global appreciation for authentic, handcrafted Indian fashion.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+    </div>
+  );
+}
