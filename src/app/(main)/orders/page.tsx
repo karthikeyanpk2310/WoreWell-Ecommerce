@@ -1,7 +1,8 @@
+
 'use client';
 
 import { useAuth } from '@/hooks/useAuth';
-import { useCollection, useFirestore } from '@/firebase';
+import { useCollection, useFirestore, useMemoFirebase } from '@/firebase';
 import { collection, query, orderBy } from 'firebase/firestore';
 import type { Order } from '@/types';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,7 +11,6 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { ShoppingBag } from 'lucide-react';
 import Image from 'next/image';
-import { useMemo } from 'react';
 
 function OrderItemCard({ item }: { item: Order['items'][0] }) {
     return (
@@ -92,8 +92,8 @@ export default function OrdersPage() {
     const { user, loading: authLoading } = useAuth();
     const firestore = useFirestore();
 
-    const ordersQuery = useMemo(() => {
-        if (!user) return null;
+    const ordersQuery = useMemoFirebase(() => {
+        if (!user || !firestore) return null;
         return query(collection(firestore, `users/${user.id}/orders`), orderBy('createdAt', 'desc'));
     }, [user, firestore]);
     
