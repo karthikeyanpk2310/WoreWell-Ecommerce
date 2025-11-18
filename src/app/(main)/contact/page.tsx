@@ -50,8 +50,8 @@ export default function ContactPage() {
       
       <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
           <Image 
-            src="https://picsum.photos/seed/flowers/1200/400"
-            alt="Modern building with a field of yellow flowers"
+            src="https://images.unsplash.com/photo-1633422279841-8cd2f399e546?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxvdXR0ZXIlMjBpbWclMjBvZiUyMGZhY3Rvcnl8ZW58MHx8fHwxNzYzNDkwNjk0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Exterior of a modern factory"
             fill
             className="object-cover"
             data-ai-hint="modern building"
