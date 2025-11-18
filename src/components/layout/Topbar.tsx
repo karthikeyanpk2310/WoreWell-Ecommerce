@@ -23,12 +23,15 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 
 export function Topbar() {
   const { itemCount } = useCart();
   const { user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -39,16 +42,19 @@ export function Topbar() {
 
   const NavItems = () => (
      <>
-      {navLinks.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {link.label}
-        </Link>
-      ))}
+      {navLinks.map((link) => {
+        const isActive = pathname === link.href;
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-primary" : "text-muted-foreground")}
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {link.label}
+          </Link>
+        )
+      })}
     </>
   );
 
