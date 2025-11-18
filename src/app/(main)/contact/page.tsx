@@ -50,11 +50,11 @@ export default function ContactPage() {
       
       <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
           <Image 
-            src="https://picsum.photos/seed/looms/1200/400"
-            alt="Weaving factory with looms"
+            src="https://picsum.photos/seed/flowers/1200/400"
+            alt="Modern building with a field of yellow flowers"
             fill
             className="object-cover"
-            data-ai-hint="weaving factory"
+            data-ai-hint="modern building"
           />
       </div>
 
