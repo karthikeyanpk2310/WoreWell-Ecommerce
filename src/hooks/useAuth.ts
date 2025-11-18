@@ -3,11 +3,10 @@
 import { useUser as useFirebaseUser, useAuth as useFirebaseAuth, useDoc } from "@/firebase";
 import { useToast } from "./use-toast";
 import { useRouter } from "next/navigation";
-import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc, DocumentReference } from "firebase/firestore";
 import { useFirestore } from "@/firebase";
 import { setDocumentNonBlocking } from "@/firebase/non-blocking-updates";
-import { initiateEmailSignIn } from "@/firebase/non-blocking-login";
 import type { User } from "@/types";
 import { useMemo } from "react";
 
@@ -31,13 +30,17 @@ export const useAuth = () => {
 
   const login = async (email: string, password_unused: string) => {
     try {
-      initiateEmailSignIn(auth, email, password_unused);
+      await signInWithEmailAndPassword(auth, email, password_unused);
       router.push('/');
     } catch (error: any) {
       console.error("Login failed", error);
+      let description = "An unexpected error occurred. Please try again.";
+      if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
+        description = "Invalid email or password. Please check your credentials and try again.";
+      }
       toast({
         title: "Login Failed",
-        description: error.message,
+        description,
         variant: "destructive",
       });
     }
