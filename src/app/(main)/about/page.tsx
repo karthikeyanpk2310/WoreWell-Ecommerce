@@ -58,24 +58,22 @@ export default function AboutUsPage() {
       </section>
 
       <section className="text-center">
-        <h2 className="text-4xl font-headline font-bold mb-8">Meet Our Founders</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className="text-4xl font-headline font-bold mb-12">Meet Our Founders</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {founders.map((founder) => (
-            <Card key={founder.name} className="overflow-hidden group">
-              <div className="relative h-64">
+            <div key={founder.name} className="flex flex-col items-center">
+              <div className="relative h-48 w-48 mb-4">
                 <Image
                   src={founder.imageUrl}
                   alt={`Portrait of ${founder.name}`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover rounded-full shadow-lg"
                   data-ai-hint={founder.imageHint}
                 />
               </div>
-              <CardHeader className="p-4">
-                <CardTitle className="text-xl">{founder.name}</CardTitle>
-                <p className="text-sm text-primary font-semibold">{founder.role}</p>
-              </CardHeader>
-            </Card>
+              <h3 className="text-xl font-bold">{founder.name}</h3>
+              <p className="text-primary font-semibold">{founder.role}</p>
+            </div>
           ))}
         </div>
       </section>
