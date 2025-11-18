@@ -32,7 +32,6 @@ export function Topbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/shop', label: 'Shop' },
-    { href: '/admin', label: 'Admin' },
   ];
 
   const NavItems = () => (
