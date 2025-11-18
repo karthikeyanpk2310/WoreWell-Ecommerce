@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "mens-shirt",
+      "description": "A man wearing a casual blue shirt.",
+      "imageUrl": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW5zJTIwc2hpcnR8ZW58MHx8fHwxNzYzNDU2NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mens shirt"
+    },
+    {
+      "id": "women-dress",
+      "description": "A woman in an elegant floral midi dress.",
+      "imageUrl": "https://images.unsplash.com/photo-1517970640957-23d07d5ed08c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmbG9yYWwlMjBkcmVzc3xlbnwwfHx8fDE3NjM0MjQ2MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "floral dress"
+    },
+    {
+      "id": "unisex-hoodie",
+      "description": "A person wearing a warm and cozy gray hoodie.",
+      "imageUrl": "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aG9vZGllfGVufDB8fHx8MTc2MzQ1NDU5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hoodie"
+    },
+    {
+      "id": "women-kurta",
+      "description": "A woman wearing a traditional Indian kurta.",
+      "imageUrl": "https://images.unsplash.com/photo-1667665970121-c3504c519cda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8a3VydGF8ZW58MHx8fHwxNzYzNDU2NjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kurta"
+    },
+    {
+      "id": "men-jeans",
+      "description": "A close-up of stylish blue jeans for men.",
+      "imageUrl": "https://images.unsplash.com/photo-1511196044526-5cb3bcb7071b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBqZWFuc3xlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men jeans"
+    },
+    {
+      "id": "women-saree",
+      "description": "A woman draped in a beautiful, colorful saree.",
+      "imageUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzYXJlZXxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "saree"
+    },
+    {
+      "id": "men-kurta",
+      "description": "A man wearing a stylish traditional Indian kurta.",
+      "imageUrl": "https://images.unsplash.com/photo-1727835523550-18478cacefa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBrdXJ0YXxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men kurta"
+    },
+    {
+      "id": "women-top",
+      "description": "A woman wearing a modern and stylish top.",
+      "imageUrl": "https://images.unsplash.com/photo-1660067262025-271603ac1283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21lbiUyMHRvcHxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women top"
+    },
+    {
+      "id": "men-tshirt",
+      "description": "A man in a casual and comfortable t-shirt.",
+      "imageUrl": "https://images.unsplash.com/photo-1590999659195-e64a988eaf4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjB0c2hpcnR8ZW58MHx8fHwxNzYzNDU2NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "men tshirt"
+    },
+    {
+      "id": "women-jeans",
+      "description": "A woman wearing trendy and fashionable jeans.",
+      "imageUrl": "https://images.unsplash.com/photo-1598911593334-a7354b0e65cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21lbiUyMGplYW5zfGVufDB8fHx8MTc2MzQ1NjYyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women jeans"
+    }
+  ]
 }
