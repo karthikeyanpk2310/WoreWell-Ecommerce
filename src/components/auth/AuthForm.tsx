@@ -179,7 +179,7 @@ export function AuthForm({ type }: AuthFormProps) {
                             <RadioGroupItem value="female" />
                           </FormControl>
                           <FormLabel className="font-normal">Female</FormLabel>
-                        </Item>
+                        </FormItem>
                         <FormItem className="flex items-center space-x-2 space-y-0">
                           <FormControl>
                             <RadioGroupItem value="other" />

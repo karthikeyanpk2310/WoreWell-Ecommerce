@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent } from '@/components/ui/card';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
