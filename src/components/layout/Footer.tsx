@@ -22,9 +22,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-foreground">Follow Us</h3>
             <div className="flex mt-2 space-x-4">
-              <Link href="#" className="hover:text-primary"><Facebook size={20} /></Link>
-              <Link href="#" className="hover:text-primary"><Twitter size={20} /></Link>
-              <Link href="#" className="hover:text-primary"><Instagram size={20} /></Link>
+              <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Facebook size={20} /></Link>
+              <Link href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Twitter size={20} /></Link>
+              <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><Instagram size={20} /></Link>
             </div>
           </div>
         </div>
