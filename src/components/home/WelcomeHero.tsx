@@ -2,21 +2,10 @@
 
 import { useAuth } from '@/hooks/useAuth';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
 export function WelcomeHero() {
   const { user, loading } = useAuth();
-  const router = useRouter();
 
-  useEffect(() => {
-    // Only redirect if loading is finished and there is still no user.
-    if (!loading && !user) {
-      router.push('/login');
-    }
-  }, [user, loading, router]);
-  
-  // While loading, or if there's no user yet (and we're not finished loading), show a skeleton.
   if (loading || !user) {
     return (
         <div className="p-8 rounded-lg bg-card border shadow-sm">
@@ -26,7 +15,6 @@ export function WelcomeHero() {
     );
   }
 
-  // Once loading is complete and we have a user, show the welcome message.
   const firstName = user.name.split(' ')[0];
   const addressSnippet = user.address.split(',').slice(0, 2).join(',');
 
