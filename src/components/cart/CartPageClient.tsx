@@ -44,7 +44,7 @@ export function CartPageClient() {
                         <CardContent className="space-y-4">
                             <div className="flex justify-between">
                                 <span>Subtotal ({itemCount} items)</span>
-                                <span>₹{cartTotal.toLocaleString()}</span>
+                                <span>INR {cartTotal.toLocaleString()}</span>
                             </div>
                              <div className="flex justify-between">
                                 <span>Shipping</span>
@@ -53,7 +53,7 @@ export function CartPageClient() {
                             <Separator />
                             <div className="flex justify-between font-bold text-lg">
                                 <span>Total</span>
-                                <span>₹{cartTotal.toLocaleString()}</span>
+                                <span>INR {cartTotal.toLocaleString()}</span>
                             </div>
                         </CardContent>
                         <CardFooter>

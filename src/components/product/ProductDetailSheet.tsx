@@ -51,7 +51,7 @@ export default function ProductDetailSheet({ product, isOpen, onOpenChange }: Pr
               <SheetHeader className="text-left mb-4">
                 <SheetTitle className="text-3xl font-headline">{product.name}</SheetTitle>
                 <div className="flex items-center gap-4 pt-2">
-                    <p className="text-2xl font-bold text-primary">₹{product.price.toLocaleString()}</p>
+                    <p className="text-2xl font-bold text-primary">INR {product.price.toLocaleString()}</p>
                     <div className="flex items-center gap-2">
                       <RatingStars rating={product.rating} />
                       <span className="text-sm text-muted-foreground">({product.rating} stars)</span>

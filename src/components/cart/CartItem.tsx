@@ -37,7 +37,7 @@ export function CartItem({ item }: CartItemProps) {
                 </div>
             </div>
             <div className="text-right flex flex-col items-end justify-between h-full">
-                <p className="font-bold">₹{(item.price * item.quantity).toLocaleString()}</p>
+                <p className="font-bold">INR {(item.price * item.quantity).toLocaleString()}</p>
                 <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-destructive" onClick={() => removeFromCart(item.productId, item.size)}>
                     <Trash2 className="h-5 w-5" />
                     <span className="sr-only">Remove item</span>

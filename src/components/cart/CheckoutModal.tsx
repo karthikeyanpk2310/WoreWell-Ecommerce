@@ -37,7 +37,7 @@ export default function CheckoutModal({ isOpen, onOpenChange }: CheckoutModalPro
                     <AlertDialogTitle>Confirm Your Order</AlertDialogTitle>
                     <AlertDialogDescription>
                         Your order will be placed as Cash on Delivery (COD). The total amount of 
-                        <span className="font-bold text-foreground"> ₹{cartTotal.toLocaleString()} </span> 
+                        <span className="font-bold text-foreground"> INR {cartTotal.toLocaleString()} </span> 
                         will be collected upon delivery.
                         <br/><br/>
                         Estimated delivery is within 3 business days.

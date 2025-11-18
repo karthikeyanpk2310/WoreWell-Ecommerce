@@ -60,7 +60,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <CardContent className="p-4 space-y-2">
           <h3 className="text-lg font-semibold truncate group-hover:text-primary">{product.name}</h3>
           <div className="flex items-center justify-between">
-            <p className="text-xl font-bold">₹{product.price.toLocaleString()}</p>
+            <p className="text-xl font-bold">INR {product.price.toLocaleString()}</p>
             <div className="flex items-center gap-1">
               <RatingStars rating={product.rating} />
               <span className="text-sm text-muted-foreground">({product.rating})</span>

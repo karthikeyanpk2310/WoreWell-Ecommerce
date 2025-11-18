@@ -85,8 +85,8 @@ export function FilterPanel({ filters, onFilterChange }: FilterPanelProps) {
                   onValueChange={(value) => onFilterChange({ ...filters, priceRange: value as [number, number] })}
                 />
                 <div className="flex justify-between mt-2 text-sm text-muted-foreground">
-                    <span>₹{filters.priceRange[0]}</span>
-                    <span>₹{filters.priceRange[1]}</span>
+                    <span>INR {filters.priceRange[0]}</span>
+                    <span>INR {filters.priceRange[1]}</span>
                 </div>
             </div>
           </AccordionContent>
