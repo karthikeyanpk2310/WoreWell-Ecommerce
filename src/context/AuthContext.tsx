@@ -1,28 +1,22 @@
-
 'use client';
 
-import React, { createContext, useState, useEffect, ReactNode, useCallback } from 'react';
+import React, { createContext, ReactNode, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { getAuthToken, setAuthToken, removeAuthToken } from '@/lib/auth';
-import type { User } from '@/types';
-
-// TODO: Replace with actual API calls
-// For now, we'll use mock data and simulate API calls
-
-const MOCK_USER: User = {
-  id: '1',
-  name: 'Jane Doe',
-  email: 'jane.doe@example.com',
-  phone: '9876543210',
-  gender: 'female',
-  address: '123, Fashion Street, Mumbai, India',
-  createdAt: new Date().toISOString(),
-};
+import type { User as AppUser } from '@/types';
+import { useAuth, useFirestore, useUser } from '@/firebase';
+import { 
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword, 
+  signOut 
+} from 'firebase/auth';
+import { doc } from 'firebase/firestore';
+import { setDocumentNonBlocking } from '@/firebase/non-blocking-updates';
+import { useToast } from '@/hooks/use-toast';
 
 type AuthContextType = {
-  user: User | null;
+  user: AppUser | null;
   login: (email: string, pass: string) => Promise<void>;
-  signup: (userData: Omit<User, 'id' | 'createdAt'>) => Promise<void>;
+  signup: (userData: Omit<AppUser, 'id' | 'createdAt'>) => Promise<void>;
   logout: () => void;
   loading: boolean;
 };
@@ -30,62 +24,84 @@ type AuthContextType = {
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { user: firebaseUser, isUserLoading, userError } = useUser();
+  const auth = useAuth();
+  const firestore = useFirestore();
   const router = useRouter();
+  const { toast } = useToast();
 
-  const verifyToken = useCallback(async () => {
-    const token = getAuthToken();
-    if (token) {
-      // TODO: Call API to verify token and get user data
-      // For now, we just simulate a successful verification
-      try {
-        await new Promise(resolve => setTimeout(resolve, 200)); // Simulate network delay
-        setUser(MOCK_USER);
-      } catch (error) {
-        console.error('Token verification failed', error);
-        removeAuthToken();
-        setUser(null);
-      }
-    }
-    setLoading(false);
-  }, []);
+  // Here you could fetch your custom user profile from Firestore
+  // For now, we'll construct a mock AppUser from the firebaseUser
+  const user: AppUser | null = firebaseUser ? {
+    id: firebaseUser.uid,
+    name: firebaseUser.displayName || 'Wore Well User',
+    email: firebaseUser.email || '',
+    phone: firebaseUser.phoneNumber || '',
+    gender: 'other', // This should be fetched from your user profile in Firestore
+    address: '', // This should also be in the user profile
+    createdAt: firebaseUser.metadata.creationTime || new Date().toISOString(),
+  } : null;
 
-  useEffect(() => {
-    verifyToken();
-  }, [verifyToken]);
-  
   const login = async (email: string, password_unused: string) => {
-    // TODO: POST /api/auth/login
-    // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, { ... });
-    console.log('Logging in with', email);
-    await new Promise(resolve => setTimeout(resolve, 500)); // Simulate API call
-    const mockToken = 'fake-jwt-token';
-    setAuthToken(mockToken);
-    setUser(MOCK_USER);
-    router.push('/');
+    try {
+      await signInWithEmailAndPassword(auth, email, password_unused);
+      router.push('/');
+    } catch (error: any) {
+      console.error('Login failed', error);
+      toast({
+        title: 'Login Failed',
+        description: error.message,
+        variant: 'destructive',
+      });
+    }
   };
 
-  const signup = async (userData: Omit<User, 'id' | 'createdAt'>) => {
-    // TODO: POST /api/auth/register
-    // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, { ... });
-    console.log('Signing up with', userData);
-    await new Promise(resolve => setTimeout(resolve, 500)); // Simulate API call
-    const mockToken = 'fake-jwt-token';
-    setAuthToken(mockToken);
-    setUser({ ...MOCK_USER, ...userData });
-    router.push('/?signup=success');
+  const signup = async (userData: Omit<AppUser, 'id' | 'createdAt'>) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+      const { uid } = userCredential.user;
+
+      const newUser: Omit<AppUser, 'password'> = {
+        id: uid,
+        name: userData.name,
+        email: userData.email,
+        phone: userData.phone,
+        gender: userData.gender,
+        address: userData.address,
+        createdAt: new Date().toISOString(),
+      };
+      
+      // Create a user document in Firestore
+      const userDocRef = doc(firestore, 'users', uid);
+      setDocumentNonBlocking(userDocRef, newUser, { merge: true });
+
+      router.push('/?signup=success');
+    } catch (error: any) {
+      console.error('Signup failed', error);
+      toast({
+        title: 'Sign Up Failed',
+        description: error.message,
+        variant: 'destructive',
+      });
+    }
   };
   
-  const logout = () => {
-    // TODO: Call backend to invalidate token if necessary
-    removeAuthToken();
-    setUser(null);
-    router.push('/login');
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      router.push('/login');
+    } catch (error: any) {
+      console.error('Logout failed', error);
+      toast({
+        title: 'Logout Failed',
+        description: error.message,
+        variant: 'destructive',
+      });
+    }
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout, loading }}>
+    <AuthContext.Provider value={{ user, login, signup, logout, loading: isUserLoading }}>
       {children}
     </AuthContext.Provider>
   );
