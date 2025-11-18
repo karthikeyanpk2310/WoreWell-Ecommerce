@@ -43,7 +43,7 @@ export default function OrderSuccessPage() {
                             <Link href="/shop">Continue Shopping</Link>
                         </Button>
                         <Button asChild variant="outline" className="flex-1">
-                            <Link href="#">View Orders</Link>
+                            <Link href="/orders">View Orders</Link>
                         </Button>
                     </div>
                 </CardContent>
