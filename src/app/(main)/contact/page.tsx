@@ -50,11 +50,11 @@ export default function ContactPage() {
       
       <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
           <Image 
-            src="https://picsum.photos/seed/map/1200/400"
-            alt="Map showing office location"
+            src="https://picsum.photos/seed/looms/1200/400"
+            alt="Weaving factory with looms"
             fill
             className="object-cover"
-            data-ai-hint="city map"
+            data-ai-hint="weaving factory"
           />
       </div>
 
