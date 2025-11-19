@@ -2,24 +2,27 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Award, Users, Handshake } from 'lucide-react';
+import karthikeyanImage from '../../../../assets/Founder.jpg';
+import bharathiImage from '../../../../assets/CofounderBharathi.jpg';
+import gopikaImage from '../../../../assets/CofounderGopika.jpg';
 
 const founders = [
   {
     name: 'P.K. Karthikeyan',
     role: 'Founder',
-    imageUrl: '/assets/Founder.jpg',
+    imageUrl: karthikeyanImage,
     imageHint: 'professional headshot'
   },
   {
     name: 'Bharathi',
     role: 'Co-Founder',
-    imageUrl: 'https://picsum.photos/seed/bharathi/400/400',
+    imageUrl: bharathiImage,
     imageHint: 'professional headshot'
   },
   {
     name: 'Gopika',
     role: 'Co-Founder',
-    imageUrl: 'https://picsum.photos/seed/gopika/400/400',
+    imageUrl: gopikaImage,
     imageHint: 'professional headshot'
   },
 ];
@@ -97,7 +100,7 @@ export default function AboutUsPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              Through unwavering dedication to our mission, Wore Well has proudly achieved an annual revenue of <span className="font-bold text-foreground">₹20 Crores within just five years</span>, a testament to the global appreciation for authentic, handcrafted Indian fashion.
+              Through unwavering dedication to our mission, Wore Well has proudly achieved an annual revenue of <span className="font-bold text-foreground">INR 20 Crores within just five years</span>, a testament to the global appreciation for authentic, handcrafted Indian fashion.
             </p>
           </CardContent>
         </Card>
