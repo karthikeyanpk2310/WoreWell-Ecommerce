@@ -2,14 +2,12 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Award, Users, Handshake } from 'lucide-react';
-import karthikeyanImage from '../../../../public/assets/Founder.jpg';
-import bharathiImage from '../../../../public/assets/CofounderBharathi.jpg';
-import gopikaImage from '../../../../public/assets/CofounderGopika.jpg';
+
 const founders = [
   {
     name: 'P.K. Karthikeyan',
     role: 'Founder',
-    imageUrl: '/assets/Founder.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMG1hbGV8ZW58MHx8fHwxNzYzNTQyNDM2fDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'professional headshot'
   },
   {
