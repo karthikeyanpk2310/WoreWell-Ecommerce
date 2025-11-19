@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { Product } from '@/types';
 import { FilterPanel } from './FilterPanel';
 import { ProductGrid } from './ProductGrid';
@@ -37,6 +37,12 @@ export function ShopPageClient({ products }: { products: Product[] }) {
   });
   const [sortOption, setSortOption] = useState('popular');
   const isMobile = useIsMobile();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
 
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = products.filter(product => {
@@ -83,7 +89,7 @@ export function ShopPageClient({ products }: { products: Product[] }) {
           <p className="text-muted-foreground">{filteredAndSortedProducts.length} Products</p>
           
           <div className="flex items-center gap-4">
-             {isMobile && (
+             {isClient && isMobile && (
                 <Sheet>
                   <SheetTrigger asChild>
                     <Button variant="outline" size="icon">
