@@ -2,24 +2,27 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Award, Users, Handshake } from 'lucide-react';
-
+import karthikeyanImage from '../../../../assets/Founder.jpg';
+import bharathiImage from '../../../../assets/CofounderBharathi.jpg';
+import gopikaImage from '../../../../assets/CofounderGopika.jpg';
+import usericonImage from '../../../../assets/iconworewell.jpg';
 const founders = [
   {
     name: 'P.K. Karthikeyan',
     role: 'Founder',
-    imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMG1hbGV8ZW58MHx8fHwxNzYzNTQyNDM2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    imageUrl: karthikeyanImage,
     imageHint: 'professional headshot'
   },
   {
     name: 'Bharathi',
     role: 'Co-Founder',
-    imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHdvbWFufGVufDB8fHx8MTc2MzU0MjQzNnww&ixlib=rb-4.1.0&q=80&w=1080',
+    imageUrl: bharathiImage,
     imageHint: 'professional headshot'
   },
   {
     name: 'Gopika',
     role: 'Co-Founder',
-    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHdvbWFufGVufDB8fHx8MTc2MzU0MjQzNnww&ixlib=rb-4.1.0&q=80&w=1080',
+    imageUrl: gopikaImage,
     imageHint: 'professional headshot'
   },
 ];
