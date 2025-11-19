@@ -7,7 +7,7 @@ const founders = [
   {
     name: 'P.K. Karthikeyan',
     role: 'Founder',
-    imageUrl: 'https://picsum.photos/seed/karthikeyan/400/400',
+    imageUrl: 'https://picsum.photos/seed/pk-karthikeyan/400/400',
     imageHint: 'professional headshot'
   },
   {
