@@ -12,6 +12,7 @@ import { useMemo } from 'react';
 import { CarouselSkeleton } from '@/components/home/CarouselSkeleton';
 import { Confetti } from '@/components/shared/Confetti';
 
+
 // Using a wrapper to avoid the entire page being dynamic just for search params.
 const ConfettiWrapper = () => {
   const searchParams = useSearchParams();
