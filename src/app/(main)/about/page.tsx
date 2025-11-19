@@ -2,27 +2,24 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Award, Users, Handshake } from 'lucide-react';
-import karthikeyanImage from '../../../../assets/Founder.jpg';
-import bharathiImage from '../../../../assets/CofounderBharathi.jpg';
-import gopikaImage from '../../../../assets/CofounderGopika.jpg';
 
 const founders = [
   {
     name: 'P.K. Karthikeyan',
     role: 'Founder',
-    imageUrl: karthikeyanImage,
+    imageUrl: 'https://picsum.photos/seed/founder1/400/400',
     imageHint: 'professional headshot'
   },
   {
     name: 'Bharathi',
     role: 'Co-Founder',
-    imageUrl: bharathiImage,
+    imageUrl: 'https://picsum.photos/seed/founder2/400/400',
     imageHint: 'professional headshot'
   },
   {
     name: 'Gopika',
     role: 'Co-Founder',
-    imageUrl: gopikaImage,
+    imageUrl: 'https://picsum.photos/seed/founder3/400/400',
     imageHint: 'professional headshot'
   },
 ];
@@ -49,11 +46,11 @@ export default function AboutUsPage() {
             </div>
              <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                    src="https://images.unsplash.com/photo-1601382270349-49c15bddf738?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8QnVzaW5lc3MlMjBHcm93dGglMjByZWZlcmVuY2UlMjBpbWFnZXN8ZW58MHx8fHwxNzYzNDkxNjQzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Weaving factory with looms"
+                    src="https://images.unsplash.com/photo-1562237332-18bae3569c76?q=80&w=2070&auto=format&fit=crop"
+                    alt="Hands of a weaver on a traditional loom"
                     fill
                     className="object-cover"
-                    data-ai-hint="weaving factory"
+                    data-ai-hint="traditional weaving"
                 />
             </div>
           </CardContent>
