@@ -2,24 +2,26 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Award, Users, Handshake } from 'lucide-react';
-
+import karthikeyanImage from '../../../../public/assets/Founder.jpg';
+import bharathiImage from '../../../../public/assets/CofounderBharathi.jpg';
+import gopikaImage from '../../../../public/assets/CofounderGopika.jpg';
 const founders = [
   {
     name: 'P.K. Karthikeyan',
     role: 'Founder',
-    imageUrl: 'https://picsum.photos/seed/founder1/400/400',
+    imageUrl: '/assets/Founder.jpg',
     imageHint: 'professional headshot'
   },
   {
     name: 'Bharathi',
     role: 'Co-Founder',
-    imageUrl: 'https://picsum.photos/seed/founder2/400/400',
+    imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHdvbWFufGVufDB8fHx8MTc2MzU0MjQzNnww&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'professional headshot'
   },
   {
     name: 'Gopika',
     role: 'Co-Founder',
-    imageUrl: 'https://picsum.photos/seed/founder3/400/400',
+    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHdvbWFufGVufDB8fHx8MTc2MzU0MjQzNnww&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'professional headshot'
   },
 ];
@@ -46,11 +48,11 @@ export default function AboutUsPage() {
             </div>
              <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image
-                    src="https://images.unsplash.com/photo-1562237332-18bae3569c76?q=80&w=2070&auto=format&fit=crop"
-                    alt="Hands of a weaver on a traditional loom"
+                    src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkcmVzc2VzJTIwfGVufDB8fHx8MTc2MzU0MzA4M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                    alt="A collection of stylish dresses on hangers"
                     fill
                     className="object-cover"
-                    data-ai-hint="traditional weaving"
+                    data-ai-hint="dresses"
                 />
             </div>
           </CardContent>
