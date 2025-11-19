@@ -96,7 +96,7 @@ export function Topbar() {
                 <Button variant="ghost" className="relative h-8 w-8 rounded-full">
                   <Avatar className="h-9 w-9">
                      {/* Using a static image for avatar placeholder */}
-                    <AvatarImage src={`https://i.pravatar.cc/150?u=${user.email}`} alt={user.name} />
+                    <AvatarImage src="https://i.pravatar.cc/150" alt="User avatar" />
                     <AvatarFallback>{user.name.charAt(0).toUpperCase()}</AvatarFallback>
                   </Avatar>
                 </Button>
