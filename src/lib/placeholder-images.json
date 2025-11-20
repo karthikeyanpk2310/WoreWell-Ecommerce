@@ -59,6 +59,24 @@
       "description": "A woman wearing trendy and fashionable jeans.",
       "imageUrl": "https://images.unsplash.com/photo-1598911593334-a7354b0e65cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21lbiUyMGplYW5zfGVufDB8fHx8MTc2MzQ1NjYyNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women jeans"
+    },
+    {
+      "id": "women-aline-dress",
+      "description": "A woman in a chic A-line dress.",
+      "imageUrl": "https://images.unsplash.com/photo-1594665349233-045a153a8a35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhLWxpbmUlMjBkcmVzc3xlbnwwfHx8fDE3NjM2NTM3NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aline dress"
+    },
+    {
+      "id": "women-maxi-dress",
+      "description": "A woman wearing a long, flowing summer maxi dress.",
+      "imageUrl": "https://images.unsplash.com/photo-1620007889781-894173e3a514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYXhpJTIwZHJlc3N8ZW58MHx8fHwxNzYzNjUzNzY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "maxi dress"
+    },
+    {
+      "id": "women-velvet-dress",
+      "description": "A woman in a luxurious velvet party dress.",
+      "imageUrl": "https://images.unsplash.com/photo-1670984369798-53b3a728b7e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2ZWx2ZXQlMjBkcmVzc3xlbnwwfHx8fDE3NjM2NTM3NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "velvet dress"
     }
   ]
 }
