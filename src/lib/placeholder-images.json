@@ -51,7 +51,7 @@
     {
       "id": "men-tshirt",
       "description": "A man in a casual and comfortable t-shirt.",
-      "imageUrl": "https://images.unsplash.com/photo-1590999659195-e64a988eaf4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjB0c2hpcnR8ZW58MHx8fHwxNzYzNDU2NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1590999659195-e64a988eaf4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjB0c2hpcnR8ZW58MHx8fHwxNzYzNDU2NjI0fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "men tshirt"
     },
     {
@@ -69,7 +69,7 @@
     {
       "id": "women-maxi-dress",
       "description": "A woman wearing a long, flowing summer maxi dress.",
-      "imageUrl": "https://images.unsplash.com/photo-1713357796381-591aadda442b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3VtbWVyJTIwbWF4aSUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTUyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1713357796381-591aadda442b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3VtbWVyJTIwbWF4aSUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTUyNHww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "maxi dress"
     },
     {
@@ -87,7 +87,7 @@
     {
       "id": "men-polo",
       "description": "A close-up of a classic men's polo shirt.",
-      "imageUrl": "https://images.unsplash.com/photo-1622560481077-057c004b2298?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBwb2xvJTIwc2hpcnR8ZW58MHx8fHwxNzYzNjU0MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1446214814726-e6074845b4ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBjbGFzc2ljJTIwcG9sbyUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTk0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "polo shirt"
     },
     {
