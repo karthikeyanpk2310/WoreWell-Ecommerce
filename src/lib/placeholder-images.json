@@ -76,7 +76,25 @@
       "id": "women-velvet-dress",
       "description": "A woman in a luxurious velvet party dress.",
       "imageUrl": "https://images.unsplash.com/photo-1656574781686-40935ee15db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2ZWx2ZXQlMjBwYXJ0eSUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTQzNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "velvet party dress"
+      "imageHint": "velvet dress"
+    },
+    {
+      "id": "men-blazer",
+      "description": "A man wearing a sharp, modern formal blazer.",
+      "imageUrl": "https://images.unsplash.com/photo-1617137968427-85924c800a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb3JtYWwlMjBibGF6ZXJ8ZW58MHx8fHwxNzYzNjU0MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "formal blazer"
+    },
+    {
+      "id": "men-polo",
+      "description": "A close-up of a classic men's polo shirt.",
+      "imageUrl": "https://images.unsplash.com/photo-1622560481077-057c004b2298?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtZW4lMjBwb2xvJTIwc2hpcnR8ZW58MHx8fHwxNzYzNjU0MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "polo shirt"
+    },
+    {
+      "id": "men-sherwani",
+      "description": "A man in a traditional, elegant Indian sherwani.",
+      "imageUrl": "https://images.unsplash.com/photo-1630948386342-e6e768a8b139?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjBzaGVyd2FuaXxlbnwwfHx8fDE3NjM2NTQwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sherwani"
     }
   ]
 }
