@@ -50,7 +50,7 @@ export default function ContactPage() {
       
       <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
           <Image 
-            src="https://images.unsplash.com/photo-1599658880111-3d7f58a5e396?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1760561148865-c6efe73a756a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOXx8bW9kZXJuJTIwb2ZmaWNlJTIwYnVpbGRpbmclMjBleHRlcmlvcnxlbnwwfHx8fDE3NjM2NDgzODd8MA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Modern office building exterior"
             fill
             className="object-cover"
