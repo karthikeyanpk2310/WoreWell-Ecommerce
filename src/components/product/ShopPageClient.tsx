@@ -90,7 +90,7 @@ export function ShopPageClient({ products }: { products: Product[] }) {
           <p className="text-muted-foreground">{filteredAndSortedProducts.length} Products</p>
           
           <div className="flex items-center gap-4">
-             {isClient && isMobile ? (
+             {isClient && isMobile && (
                 <Sheet>
                   <SheetTrigger asChild>
                     <Button variant="outline" size="icon">
@@ -105,7 +105,7 @@ export function ShopPageClient({ products }: { products: Product[] }) {
                     </div>
                   </SheetContent>
                 </Sheet>
-              ) : null}
+              )}
 
             <Select value={sortOption} onValueChange={setSortOption}>
               <SelectTrigger className="w-[180px]">
