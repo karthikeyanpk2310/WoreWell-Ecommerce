@@ -107,8 +107,7 @@ export function Topbar() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="relative h-8 w-8 rounded-full">
                   <Avatar className="h-9 w-9">
-                     {/* Using a static image for avatar placeholder */}
-                    <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User avatar" />
+                    <AvatarImage src="https://picsum.photos/seed/user-avatar/150/150" alt="User avatar" data-ai-hint="person portrait" />
                     <AvatarFallback>{user.name.charAt(0).toUpperCase()}</AvatarFallback>
                   </Avatar>
                 </Button>
