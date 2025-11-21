@@ -20,7 +20,7 @@ const founders = [
     imageHint: 'professional headshot'
   },
   {
-    name: 'Gopika',
+    name: 'S.R.Gopika',
     role: 'Co-Founder',
     imageUrl: gopikaImage,
     imageHint: 'professional headshot'
