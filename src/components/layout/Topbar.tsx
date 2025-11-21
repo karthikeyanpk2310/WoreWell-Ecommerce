@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -23,7 +22,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 
@@ -31,7 +30,18 @@ export function Topbar() {
   const { itemCount } = useCart();
   const { user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const router = useRouter();
   const pathname = usePathname();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      router.push(`/shop?q=${encodeURIComponent(searchTerm.trim())}`);
+    } else {
+      router.push('/shop');
+    }
+  };
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -71,14 +81,16 @@ export function Topbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="hidden sm:block relative w-full max-w-sm">
+          <form onSubmit={handleSearch} className="hidden sm:block relative w-full max-w-sm">
             <Input
               type="search"
               placeholder="Search products..."
               className="pl-10"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-          </div>
+          </form>
           <Link href="/cart">
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-6 w-6" />

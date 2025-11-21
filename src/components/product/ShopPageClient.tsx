@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, Suspense } from 'react';
 import type { Product } from '@/types';
 import { FilterPanel } from './FilterPanel';
 import { ProductGrid } from './ProductGrid';
@@ -20,6 +20,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useSearchParams } from 'next/navigation';
 
 
 type Filters = {
@@ -29,7 +30,10 @@ type Filters = {
   rating: number;
 };
 
-export function ShopPageClient({ products }: { products: Product[] }) {
+function ShopPageClientContent({ products }: { products: Product[] }) {
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get('q');
+
   const [filters, setFilters] = useState<Filters>({
     gender: [],
     size: [],
@@ -47,6 +51,12 @@ export function ShopPageClient({ products }: { products: Product[] }) {
 
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = products.filter(product => {
+      // Search filter
+      if (searchQuery && !product.name.toLowerCase().includes(searchQuery.toLowerCase()) && !product.description.toLowerCase().includes(searchQuery.toLowerCase())) {
+        return false;
+      }
+
+      // Panel filters
       if (filters.gender.length > 0 && !filters.gender.includes(product.gender)) {
         return false;
       }
@@ -73,7 +83,7 @@ export function ShopPageClient({ products }: { products: Product[] }) {
       default:
         return filtered.sort((a, b) => b.rating - a.rating);
     }
-  }, [products, filters, sortOption]);
+  }, [products, filters, sortOption, searchQuery]);
 
   const FilterPanelContent = () => (
      <FilterPanel filters={filters} onFilterChange={setFilters} />
@@ -81,9 +91,11 @@ export function ShopPageClient({ products }: { products: Product[] }) {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-      <div className="hidden lg:block lg:col-span-1">
-        <FilterPanelContent />
-      </div>
+      <aside className="hidden lg:block lg:col-span-1">
+        <div className="sticky top-24">
+          <FilterPanelContent />
+        </div>
+      </aside>
 
       <div className="lg:col-span-3">
         <div className="flex justify-between items-center mb-6">
@@ -105,9 +117,9 @@ export function ShopPageClient({ products }: { products: Product[] }) {
                     </div>
                   </SheetContent>
                 </Sheet>
-              ) : (
-                <div className="w-10 h-10 lg:hidden" />
-              )}
+              ) : null }
+              {isClient && !isMobile && <div className="w-10 h-10 lg:hidden" />}
+
 
             <Select value={sortOption} onValueChange={setSortOption}>
               <SelectTrigger className="w-[180px]">
@@ -126,4 +138,12 @@ export function ShopPageClient({ products }: { products: Product[] }) {
       </div>
     </div>
   );
+}
+
+export function ShopPageClient({ products }: { products: Product[] }) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ShopPageClientContent products={products} />
+    </Suspense>
+  )
 }
