@@ -24,8 +24,7 @@ export function UserProfileDialog({ isOpen, onOpenChange, user }: UserProfileDia
         <DialogHeader>
           <div className="flex flex-col items-center pt-8 pb-4">
             <Avatar className="h-24 w-24 mb-4">
-              <AvatarImage src="https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1c2VyJTIwaWNvbnxlbnwwfHx8fDE3NjM2ODkxMDh8MA&ixlib=rb-4.1.0&q=80&w=1080" alt={user.name} data-ai-hint="person portrait" />
-              <AvatarFallback>{user.name.charAt(0).toUpperCase()}</AvatarFallback>
+              <AvatarFallback className="text-4xl">{user.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <DialogTitle className="text-2xl font-bold">{user.name}</DialogTitle>
           </div>
