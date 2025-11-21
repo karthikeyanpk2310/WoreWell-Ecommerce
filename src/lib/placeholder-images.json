@@ -9,13 +9,13 @@
     {
       "id": "women-dress",
       "description": "A woman in an elegant floral midi dress.",
-      "imageUrl": "https://images.unsplash.com/photo-1517970640957-23d07d5ed08c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmbG9yYWwlMjBkcmVzc3xlbnwwfHx8fDE3NjM0MjQ2MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517970640957-23d07d5ed08c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmbG9yYWwlMjBkcmVzc3xlbnwwfHx8fDE3NjM0MjQ2MDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "floral dress"
     },
     {
       "id": "unisex-hoodie",
       "description": "A person wearing a warm and cozy gray hoodie.",
-      "imageUrl": "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aG9vZGllfGVufDB8fHx8MTc2MzQ1NDU5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aG9vZGllfGVufDB8fHx8MTc2MzQ1NDU5NHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hoodie"
     },
     {
@@ -27,25 +27,25 @@
     {
       "id": "men-jeans",
       "description": "A close-up of stylish blue jeans for men.",
-      "imageUrl": "https://images.unsplash.com/photo-1511196044526-5cb3bcb7071b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBqZWFuc3xlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1511196044526-5cb3bcb7071b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBqZWFuc3xlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "men jeans"
     },
     {
       "id": "women-saree",
       "description": "A woman draped in a beautiful, colorful saree.",
-      "imageUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzYXJlZXxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzYXJlZXxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "saree"
     },
     {
       "id": "men-kurta",
       "description": "A man wearing a stylish traditional Indian kurta.",
-      "imageUrl": "https://images.unsplash.com/photo-1727835523550-18478cacefa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBrdXJ0YXxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1727835523550-18478cacefa2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBrdXJ0YXxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "men kurta"
     },
     {
       "id": "women-top",
       "description": "A woman wearing a modern and stylish top.",
-      "imageUrl": "https://images.unsplash.com/photo-1660067262025-271603ac1283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21lbiUyMHRvcHxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1660067262025-271603ac1283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21lbiUyMHRvcHxlbnwwfHx8fDE3NjM0NTY2MjR8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women top"
     },
     {
@@ -57,13 +57,13 @@
     {
       "id": "women-jeans",
       "description": "A woman wearing trendy and fashionable jeans.",
-      "imageUrl": "https://images.unsplash.com/photo-1598911593334-a7354b0e65cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21lbiUyMGplYW5zfGVufDB8fHx8MTc2MzQ1NjYyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1598911593334-a7354b0e65cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21lbiUyMGplYW5zfGVufDB8fHx8MTc2MzQ1NjYyNHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women jeans"
     },
     {
       "id": "women-aline-dress",
       "description": "A woman in a chic A-line dress.",
-      "imageUrl": "https://images.unsplash.com/photo-1718871716580-117417d490f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8Y2hpYyUyMEEtbGluZSUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTY2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1718871716580-117417d490f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8Y2hpYyUyMEEtbGluZSUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTY2Nnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "aline dress"
     },
     {
@@ -75,26 +75,32 @@
     {
       "id": "women-velvet-dress",
       "description": "A woman in a luxurious velvet party dress.",
-      "imageUrl": "https://images.unsplash.com/photo-1656574781686-40935ee15db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2ZWx2ZXQlMjBwYXJ0eSUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTQzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1656574781686-40935ee15db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2ZWx2ZXQlMjBwYXJ0eSUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTQzNnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "velvet dress"
     },
     {
       "id": "men-blazer",
       "description": "A man wearing a sharp, modern formal blazer.",
-      "imageUrl": "https://images.unsplash.com/photo-1617137968427-85924c800a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb3JtYWwlMjBibGF6ZXJ8ZW58MHx8fHwxNzYzNjU0MDMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1617137968427-85924c800a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmb3JtYWwlMjBibGF6ZXJ8ZW58MHx8fHwxNzYzNjU0MDMyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "formal blazer"
     },
     {
       "id": "men-polo",
       "description": "A close-up of a classic men's polo shirt.",
-      "imageUrl": "https://images.unsplash.com/photo-1446214814726-e6074845b4ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBjbGFzc2ljJTIwcG9sbyUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTk0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1446214814726-e6074845b4ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBjbGFzc2ljJTIwcG9sbyUyMGRyZXNzfGVufDB8fHx8MTc2MzY0NTk0MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "polo shirt"
     },
     {
       "id": "men-sherwani",
       "description": "A man in a traditional, elegant Indian sherwani.",
-      "imageUrl": "https://images.unsplash.com/photo-1630948386342-e6e768a8b139?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW4lMjBzaGVyd2FuaXxlbnwwfHx8fDE3NjM2NTQwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1760080838961-4208536db385?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaGVyd2FuaXxlbnwwfHx8fDE3NjM2OTIyMjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sherwani"
+    },
+    {
+      "id": "user-avatar",
+      "description": "A placeholder avatar for a user.",
+      "imageUrl": "https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1c2VyJTIwaWNvbnxlbnwwfHx8fDE3NjM2ODkxMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
     }
   ]
 }
